@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=2.0"/>
+	<title>日期选择器</title> 
+	<link rel="stylesheet" type="text/css" href="http://10.237.113.77/www/account/mescake/new-mescake/home-wap.css" />
+    <link rel="stylesheet" type="text/css" href="http://10.237.113.77/www/account/mescake/new-mescake/dialog.css" />
+    <link rel="stylesheet" type="text/css" href="http://10.237.113.77/www/account/mescake/new-mescake/dialog-wap.css" />
+</head>
+<body>
+	<style type="text/css">
+.data-pick{width: 250px; height: auto;  position: absolute; top:40px; left: 50%; margin-left: -120px; background: #fff; border-radius: 10px; z-index: 100; overflow: hidden;}
+.dp-item{width: 70px; height: 120px; /*border: 1px solid #ccc;*/ border-radius: 10px; margin-left: 10px; float: left; overflow: hidden;}
+.data-time{height:40px; line-height:40px; margin-bottom:20px; text-align:center; background:#f6f6f6; border-radius:10px 10px 0 0; font-weight:bold; border-bottom:1px solid #ccc;}
+
+.data-data{width: 100%; height: 40px; line-height: 40px; font-weight: bold; color: #333; font-size: 16px; border: 0 none; background: #fff; text-align: center; border: 1px solid #333; box-sizing:border-box;}
+.data-data[type="text"]:disabled{color: #333;}
+.data-add,
+.data-minus{height: 40px; line-height:40px; font-weight:bold; font-size:24px; color: #fff; text-align: center; display: block; }
+.pick2.data-pick .btn{padding:0 30px; 
+background: #000;
+background-image: -webkit-linear-gradient( #fff,#e4e4e4);
+background-image: -moz-linear-gradient( #fff,#e4e4e4 );
+background-image: -ms-linear-gradient( #fff,#e4e4e4 );
+background-image: -o-linear-gradient( #fff,#e4e4e4 );
+background-image: linear-gradient( #fff,#e4e4e4 );
+}
+.data-add,
+.pick2.data-pick .status1-btn,
+.data-minus{
+background: #000;
+background-image: -webkit-linear-gradient( #4b4b4b,#000);
+background-image: -moz-linear-gradient( #4b4b4b,#000; );
+background-image: -ms-linear-gradient( #4b4b4b,#000 );
+background-image: -o-linear-gradient( #4b4b4b,#000 );
+background-image: linear-gradient( #4b4b4b,#000 );
+text-shadow:0 1px 0 #000;
+}
+
+.data-add,
+.pick2.data-pick .status1-btn,
+.data-minus{
+background: #000;
+background-image: -webkit-linear-gradient( #e72c18,#b01504);
+background-image: -moz-linear-gradient( #e72c18,#b01504);
+background-image: -ms-linear-gradient( #e72c18,#b01504 );
+background-image: -o-linear-gradient( #e72c18,#b01504 );
+background-image: linear-gradient( #e72c18,#b01504 );
+text-shadow:0 1px 0 #000;
+}
+
+.pick2.data-pick .status1-btn{border: 1px solid #333;}
+.data-btn-area{margin-top:20px;background:#fff; padding:10px; border-top:1px solid #ccc; border-radius: 0 0 10px 10px; overflow:hidden;}
+.pick2 .data-add,
+.pick2 .data-minus{
+color: #333;
+background-image: -webkit-linear-gradient( #b4b4b4,#727272);
+background-image: -moz-linear-gradient( #b4b4b4,#727272 );
+background-image: -ms-linear-gradient( #b4b4b4,#727272 );
+background-image: -o-linear-gradient( #b4b4b4,#727272 );
+background-image: linear-gradient( #b4b4b4,#727272 );
+}
+
+.data-add,
+.pick2.data-pick .status1-btn,
+.data-minus{
+	color: #333;
+/*background: #000;*/
+background-image: -webkit-linear-gradient( #f6f6f6,#b3b3b3);
+background-image: -moz-linear-gradient( #f6f6f6,#b3b3b3);
+background-image: -ms-linear-gradient( #f6f6f6,#b3b3b3 );
+background-image: -o-linear-gradient( #f6f6f6,#b3b3b3 );
+background-image: linear-gradient( #f6f6f6,#b3b3b3 );
+text-shadow:0 1px 0 #000;
+/*border: 1px solid #aaa;*/
+overflow: hidden;
+}
+.data-pick{border: 1px solid #000;}
+.data-time{margin-bottom: 0;}
+.data-btn-area{margin-top: 0;}
+.data-data{border: 1px solid #ccc;}
+
+	</style>
+	<p>从理论上讲，你可以使用一个CSS sprite 之间进行切换不同版本的打印的标志，但是这将意味着增加一倍的文件大小可能没有什么好处。 相反，我建议使用CSS过滤器（和SVG当量，为Firefox）的反转图像之前，打印的页面： 印刷两种形式的标志（即α-蒙面PNG或纯黑色背景）的结果是：从理论上讲，你可以使用一个CSS sprite 之间进行切换不同版本的打印的标志，但是这将意味着增加一倍的文件大小可能没有什么好处。 相反，我建议使用CSS过滤器（和SVG当量，为Firefox）的反转图像之前，打印的页面： 印刷两种形式的标志（即α-蒙面PNG或纯黑色背景）的结果是：从理论上讲，你可以使用一个CSS sprite 之间进行切换不同版本的打印的标志，但是这将意味着增加一倍的文件大小可能没有什么好处。 相反，我建议使用CSS过滤器（和SVG当量，为Firefox）的反转图像之前，打印的页面： 印刷两种形式的标志（即α-蒙面PNG或纯黑色背景）的结果是：从理论上讲，你可以使用一个CSS sprite 之间进行切换不同版本的打印的标志，但是这将意味着增加一倍的文件大小可能没有什么好处。 相反，我建议使用CSS过滤器（和SVG当量，为Firefox）的反转图像之前，打印的页面： 印刷两种形式的标志（即α-蒙面PNG或纯黑色背景）的结果是：从理论上讲，你可以使用一个CSS sprite 之间进行切换不同版本的打印的标志，但是这将意味着增加一倍的文件大小可能没有什么好处。 相反，我建议使用CSS过滤器（和SVG当量，为Firefox）的反转图像之前，打印的页面： 印刷两种形式的标志（即α-蒙面PNG或纯黑色背景）的结果是：从理论上讲，你可以使用一个CSS sprite 之间进行切换不同版本的打印的标志，但是这将意味着增加一倍的文件大小可能没有什么好处。 相反，我建议使用CSS过滤器（和SVG当量，为Firefox）的反转图像之前，打印的页面： 印刷两种形式的标志（即α-蒙面PNG或纯黑色背景）的结果是：从理论上讲，你可以使用一个CSS sprite 之间进行切换不同版本的打印的标志，但是这将意味着增加一倍的文件大小可能没有什么好处。 相反，我建议使用CSS过滤器（和SVG当量，为Firefox）的反转图像之前，打印的页面： 印刷两种形式的标志（即α-蒙面PNG或纯黑色背景）的结果是：从理论上讲，你可以使用一个CSS sprite 之间进行切换不同版本的打印的标志，但是这将意味着增加一倍的文件大小可能没有什么好处。 相反，我建议使用CSS过滤器（和SVG当量，为Firefox）的反转图像之前，打印的页面： 印刷两种形式的标志（即α-蒙面PNG或纯黑色背景）的结果是：从理论上讲，你可以使用一个CSS sprite 之间进行切换不同版本的打印的标志，但是这将意味着增加一倍的文件大小可能没有什么好处。 相反，我建议使用CSS过滤器（和SVG当量，为Firefox）的反转图像之前，打印的页面： 印刷两种形式的标志（即α-蒙面PNG或纯黑色背景）的结果是：从理论上讲，你可以使用一个CSS sprite 之间进行切换不同版本的打印的标志，但是这将意味着增加一倍的文件大小可能没有什么好处。 相反，我建议使用CSS过滤器（和SVG当量，为Firefox）的反转图像之前，打印的页面： 印刷两种形式的标志（即α-蒙面PNG或纯黑色背景）的结果是：</p>
+	<div class="data-pick ">
+      <p class="data-time">所选时间：2014-06-19</p>
+      <div class="clearfix" style="background:#454545; padding:20px 0;">
+	      <div class="dp-item">
+	        <em class="data-add">+</em>
+	        <input type="text" value="2014" class="data-data" disabled="disabled" />
+	        <em class="data-minus">-</em>
+	      </div>
+	      <div class="dp-item">
+	        <em class="data-add">+</em>
+	        <input type="text" value="12" class="data-data" disabled="disabled" />
+	        <em class="data-minus">-</em>
+	      </div>
+	      <div class="dp-item">
+	        <em class="data-add">+</em>
+	        <input type="text" value="02" class="data-data" disabled="disabled" />
+	        <em class="data-minus">-</em>
+	      </div>
+	   </div>
+      <div class="tl-c data-btn-area">
+	      <a href="/checkout" class="btn status1-btn fl-l">确定</a>
+	      <a href="/checkout" class="btn fl-r" style="margin-right:0;">取消</a>
+	  </div>
+	</div>
+	<div class="data-pick pick2 hide" style="top:320px;">
+      <p class="data-time">所选时间：2014-06-19</p>
+      <div class="clearfix">
+	      <div class="dp-item">
+	        <em class="data-add">+</em>
+	        <input type="text" value="2014" class="data-data" disabled="disabled" />
+	        <em class="data-minus">-</em>
+	      </div>
+	      <div class="dp-item">
+	        <em class="data-add">+</em>
+	        <input type="text" value="12" class="data-data" disabled="disabled" />
+	        <em class="data-minus">-</em>
+	      </div>
+	      <div class="dp-item">
+	        <em class="data-add">+</em>
+	        <input type="text" value="02" class="data-data" disabled="disabled" />
+	        <em class="data-minus">-</em>
+	      </div>
+	   </div>
+      <div class="tl-c data-btn-area">
+	      <a href="/checkout" class="btn status1-btn fl-l">确定</a>
+	      <a href="/checkout" class="btn fl-r" style="margin-right:0;">取消</a>
+	  </div>
+	</div>
+	<div class="gray-bg" style="z-index:10; opacity:.6;"></div>
+</body>
+</html>

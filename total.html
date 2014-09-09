@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>购物车中的商品</title>
+  <link rel="stylesheet" type="text/css" href="home2.css" />
+</head>
+<body>
+<div class="layout">
+  <div class="mes-head">
+    <div class="clearfix">
+      <a href="/" class="main-logo fl-l"><img src="img/mes-logo.png" /></a>
+      <div class="mh-login-area fl-r">
+        <a href="">登录</a> |
+        <a href="">我的订单</a> |
+        <a href=""><em class="ico-shop"></em>购物车</a>
+        <p class="tel-con"><em class="ico-phone"></em>4000 600 700<b>订购电话</b></p>
+      </div>
+    </div>
+    <ul class="head-nav">
+      <li class="hn-item"><a href="index.php"><em class="nav-ico-home"></em>首页</a></li>
+      <li class="hn-item"><a href="brand.php?id=4">全部产品</a></li>
+      <li class="hn-item"><a href="brand.php?id=1"><em class="nav-ico-share"></em>时刻分享系列</a></li>
+      <li class="hn-item"><a href="brand.php?id=2"><em class="nav-ico-special"></em>特别系列</a></li>
+      <li class="hn-item last"><a href="brand.php?id=3"><em class="nav-ico-classic"></em>经典系列</a></li>
+    </ul>
+  </div>
+  <div class="head-line"></div>
+  <div class="content">
+    <div class="order-area">
+      <h4 class="content-title">订单信息</h4>
+      <ul class="order-ul">
+        <li class="li-bg">
+          <span class="or-name">商品</span>
+          <span class="or-price">单价</span>
+          <span class="or-num">数量</span>
+          <span class="or-total">小计</span>
+          <span class="or-handle">操作</span>
+        </li>
+        <li class="order-item">
+          <div class="or-main-container">
+            <span class="or-name">
+              <a href=""><img src="" class="or-name-img"/><span class="or-name-intro">冰魄荔枝（1.磅）</span></a>
+            </span>
+            <span class="or-price">188元</span>
+            <span class="or-num or-num-ico">
+              <em class="or-plus">-</em>
+              <span class="or-num-num">2</span>
+              <em class="or-add">+</em>
+            </span>
+            <span class="or-total">188元</span>
+            <a href="" class="or-handle">删除</a>
+          </div>
+          <div class="or-child-container">
+            <span class="or-name">
+              <img src="img/canju.png" class="or-child-img"/><span class="or-name-intro">配套餐具</span>
+            </span>
+            <span class="or-price">免费</span>
+            <span class="or-num"><span>5人份</span></span>
+            <span class="or-total">0元</span>
+          </div>
+          <div class="or-child-container">
+            <span class="or-name">
+              <span class="add-pai-area"><em class="or-child-pai"></em><span class="or-name-intro hide">添加一个生日牌</span></span><input type="text" class="global-input vt-a" placeholder="输入生日牌内容（10字以内）" />
+            </span>
+            <span class="or-price">免费</span>
+          </div>
+        </li>
+        <li class="order-item">
+          <div class="or-main-container">
+            <span class="or-name">
+              <a href=""><img src="" class="or-name-img"/><span class="or-name-intro">冰魄荔枝（1.磅）</span></a>
+            </span>
+            <span class="or-price">188元</span>
+            <span class="or-num or-num-ico">
+              <em class="or-plus">-</em>
+              <span class="or-num-num">2</span>
+              <em class="or-add">+</em>
+            </span>
+            <span class="or-total">188元</span>
+            <a href="" class="or-handle">删除</a>
+          </div>
+          <div class="or-child-container">
+            <span class="or-name">
+              <img src="img/canju.png" class="or-child-img"/><span class="or-name-intro">配套餐具</span>
+            </span>
+            <span class="or-price">免费</span>
+            <span class="or-num"><span>5人份</span></span>
+            <span class="or-total">0元</span>
+          </div>
+          <div class="or-child-container">
+            <span class="or-name">
+              <span class="add-pai-area"><em class="or-child-pai"></em><span class="or-name-intro">添加一个生日牌</span></span><input type="text" class="global-input vt-a hide" placeholder="输入生日牌内容（10字以内）" />
+            </span>
+            <span class="or-price">免费</span>
+          </div>
+        </li>
+        <li class="li-bg order-add-more">
+          <label for="dinnerware"><input type="checkbox" id="dinnerware" class="checkbox-item"/>我要添加额外的餐具（+0.5元/份）</label><br />
+          <label for="birthTitle"><input type="checkbox" id="birthTitle" class="checkbox-item" class="checkbox-item" />我要添加特别的生日蜡烛（+5元/份）</label><br />
+          <label for="leaveMes"><input type="checkbox" id="leaveMes" class="checkbox-item" />留言说明</label><br />
+          <textarea class="text-area hide"></textarea>
+          <span class="order-total-price">总计<b>188</b>元</span>
+        </li>
+      </ul>
+      <h4 class="content-title">送货信息<span class="ct-commit">*为保证送货准确性，请您填写正确无误的信息</span></h4>
+      <p class="need-login-tip">如果您之前注册购买过，请<a href="" class="td-u">登录</a>以读取地址信息，并积累积分</p>
+      <div class="account-mes-area">
+        <div class="ama-item">
+          <p class="ama-name-area"><b class="fl-l">梅梅哇</b><span class="fl-r">1892432434</span></p>
+          <p class="address-area">
+            <span class="city">北京市</span>
+            <span class="area">朝阳区</span><br/>
+            <span class="address">五道口朝阳大道5号楼345号五道口朝阳大道5号楼345号五5号楼345号</span>
+          </p>
+          <div class="clearfix handle-area">
+            <a href="" class="ama-edit fl-l">修改</a>
+            <a href="" class="ama-delete fl-r">删除</a>
+          </div>
+        </div>
+        <div class="ama-item">
+          <p class="ama-name-area"><b class="fl-l">梅梅哇</b><span class="fl-r">1892432434</span></p>
+          <p class="address-area">
+            <span class="city">北京市</span>
+            <span class="area">朝阳区</span><br/>
+            <span class="address">五道口朝阳大道5号楼345号五道口朝阳大道5号楼345号五5号楼345号</span>
+          </p>
+          <div class="clearfix handle-area">
+            <a href="" class="ama-edit fl-l">修改</a>
+            <a href="" class="ama-delete fl-r">删除</a>
+          </div>
+        </div>
+        <div class="ama-item ama-item-current">
+          <p class="ama-name-area"><b class="fl-l">梅梅哇</b><span class="fl-r">1892432434</span></p>
+          <p class="address-area">
+            <span class="city">北京市</span>
+            <span class="area">朝阳区</span><br/>
+            <span class="address">五道口朝阳大道5号楼345号五道口朝阳大道5号楼345号五5号楼345号</span>
+          </p>
+          <div class="clearfix handle-area">
+            <a href="" class="ama-edit fl-l">修改</a>
+            <a href="" class="ama-delete fl-r">删除</a>
+          </div>
+        </div>
+        <div class="ama-add-address">
+          <a href="" class="btn"><em class="add-ico">+</em>添加新地址</a>
+        </div>
+      </div>
+      <form action="">
+          <dl class="global-form-container total-form-container clearfix">
+            <dt class="l-title">送货地址：</dt>
+            <dd class="r-con clearfix">
+              <a href="javascript:void(0);" class="area-intro space">
+                北京市
+                <em class="area-intro-ico"></em>
+                <span class="ai-intro">北京市五环内免费送货，五环外不送货。</span>
+              </a>
+              <select>
+                <option>请选择区域</option>
+                <option>朝阳区</option>
+                <option>海淀区</option>
+              </select><br/>
+              <div class="check-container big-check-container" style="margin-top:10px;">
+                <input type="password" class="global-input" placeholder="详细地址"/>
+                <span class="tips-container">输入错误</span>
+              </div>
+            </dd>
+            <dt class="l-title lh-input">收货人：</dt>
+            <dd class="r-con clearfix">
+              <div class="check-container">
+                <input type="password" class="global-input" placeholder="收货人姓名"/>
+                <span class="tips-container">输入错误</span><!-- 错误信息容器,出现2秒后消失 -->
+              </div>
+            </dd>
+            <dt class="l-title lh-input">联系手机：</dt>
+            <dd class="r-con clearfix">
+              <div class="check-container">
+                <input type="text" class="global-input" placeholder="联系人的手机号码" />
+                <span class="tips-container">输入错误</span><!-- 错误信息容器,出现2秒后消失 -->
+              </div>
+            </dd>
+            <dt class="l-title">送货时间：</dt>
+            <dd class="r-con clearfix" style="margin-bottom:20px;">
+              <select>
+                <option>请选择日期</option>
+                <option>23</option>
+                <option>34</option>
+              </select>
+              <select>
+                <option>小时</option>
+                <option>23</option>
+                <option>34</option>
+              </select>
+              <select>
+                <option>分钟</option>
+                <option>23</option>
+                <option>34</option>
+              </select>
+            </dd>
+            <dt class="l-title">开发票：</dt>
+            <dd class="r-con clearfix" style="margin-bottom:20px;">
+              <input type="checkbox" class="checkbox-item" />
+            </dd>
+          </dl>
+          <dl class="global-form-container invoice-form-container clearfix">
+            <dt class="l-title">发票类型：</dt>
+            <dd class="r-con clearfix" style="margin-bottom:20px;">
+              普通发票
+            </dd>
+            <dt class="l-title">发票抬头：</dt>
+            <dd class="r-con clearfix" style="margin-bottom:20px;">
+              <label for="personal" class="space"><input type="radio" name="invoice" id="personal" class="radio-item" />个人</label>
+              <label for="company"><input type="radio" name="invoice" id="company" class="radio-item" />公司</label>
+            </dd>
+            <dt class="l-title lh-input">顾客姓名：</dt>
+            <dd class="r-con clearfix">
+              <div class="check-container">
+                <input type="password" class="global-input" placeholder="请填写发票打印抬头"/>
+                <span class="tips-container">输入错误</span>
+              </div>
+            </dd>
+            <dt class="l-title lh-input">公司名称：</dt>
+            <dd class="r-con clearfix">
+              <div class="check-container">
+                <input type="password" class="global-input" placeholder="请填写发票打印抬头"/>
+                <span class="tips-container">输入错误</span>
+              </div>
+            </dd>
+            <dt class="l-title">发票内容：</dt>
+            <dd class="r-con clearfix" style="margin-bottom:20px;">
+              <label for="cake" class="space"><input type="radio" name="invoiceCon" id="cake" class="radio-item" />蛋糕</label>
+              <label for="food"><input type="radio" name="invoiceCon" id="food" class="radio-item" />食品</label>
+            </dd>
+          </dl>
+          <h4 class="content-title">付款方式</h4>
+          <div class="payStyle">
+            <label for="cashon"><input type="radio" name="payStyle" id="cashon" class="radio-item" />货到付款</label>
+            <select style="margin:0 10px;"><option>现金付款</option><option>POS机刷卡</option></select>
+            <label for="alipay" class="space"><input type="radio" name="payStyle" id="alipay" class="radio-item" />支付宝</label>
+            <label for="kuaiqian"><input type="radio" name="payStyle" id="kuaiqian" class="radio-item" />快钱</label>
+          </div>
+          <div class="check-money-area clearfix">
+            <div class="money-style">
+            <label for="voucher"><input type="checkbox" id="voucher" class="checkbox-item" />使用现金券</label><br />
+            <div style="margin-left:20px;">
+              请输入10位现金券券号:&nbsp;&nbsp;<input type="text" class="global-input vt-a"/> <em class="error-ico">x</em><em class="suc-ico">√</em>
+            </div>
+            <label for="balance"><input type="checkbox" id="balance" class="checkbox-item" />活动赠送/礼金卡<span class="overage-area"><span>可用余额（50元）</span><a class="btn">充值</a></span></label><br />
+            <!-- 可用余额是戳了radio以后再显示出来。 -->
+            </div>
+            <div class="total-money">
+              <p><em>商品总计：</em><b>188元</b></p>
+              <p><em>配送费：</em><b>0元</b></p>
+              <p><em>优惠折扣：</em><b>0元</b></p>
+              <p class="total-p"><em>您总共需要支付：</em><b>188元</b></p>
+            </div>
+          </div>
+          <div class="tl-r">
+            <span class="total-sub-tip">请输入验证码：</span>
+            <input type="text" class="global-input" style="width:80px;" />
+            <img src="" class="check-code" style="*margin-top:-20px;"/>
+          </div>
+          <div class="tl-r">
+            <span class="total-sub-tip">请确认信息无误后下单</span>
+            <input class="btn green-btn big-btn" type="submit" style="margin-right:0;" value="提交订单"/>
+          </div>
+        </form>
+        
+    </div>
+  </div>
+  <div class="footer">
+     <div class="text">
+      订购专线：4000 600 700 &nbsp;|&nbsp; 客服邮箱：services@mescake.com&nbsp; | &nbsp;<a href="aboutus.php?aboutus=aboutus">关于我们</a><br>京ICP备13036207号 
+     </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+修改首页后的访问地址：
+
+http://10.237.113.50/route.php?mod=page&action=index
+
+git地址
+
+https://github.com/yoyoren/mescake
+
+用户名:532975417@qq.com  密码yaoYAO89
+
+
+
+2014-4-29  蜡烛弹框交互的css被注释掉了。
+
+注：以后要兼容之前的，没有正式开发的css写到页面里面去。

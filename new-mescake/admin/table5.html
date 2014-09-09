@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>所有蛋糕销售效果图</title>
+  <link rel="stylesheet" type="text/css" href="admin.css" />
+  <link rel="stylesheet" type="text/css" href="table.css" />
+</head>
+<body>
+  <div class="table-layout">
+  	<div class="al-head clearfix">
+  		<div class="fl-l"><img src="img/admin-mes-logo.png" width="120" />后台登录管理平台</div>
+  		<div class="fl-r"><a href="#" class="edit-password">修改密码</a></div>
+  	</div>
+    <div class="container">
+      <h4 class="table-title">所有蛋糕销售效果图（需要一个跟手机上面差不多的日期选择器）</h4>
+      <!-- 以消费时间和消费数量图表化呈现出某一款蛋糕在某个时期的销售效果（可以看出不同时间点的需求情况） -->
+    	<div class="table-area">
+        
+        <div style="margin:20px 0;" class="tl-r">
+          <input type="text" class="input-item" placeholder="请选择月份" />
+          <button class="btn">导出</button>   <button class="btn">推送优惠信息</button>
+        </div>
+        <div class="data-container" id="data_container" style="height:600px;"></div>
+
+        
+  	  </div>
+    </div>
+  	<div class="al-footer al-head">后台管理人员：任远  Tel:18688943324</div>
+
+  </div>
+<script src="js/jquery.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/modules/exporting.js"></script>
+<script>
+$(function () {
+
+    $('#data_container').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: '所有蛋糕'
+        },
+        subtitle: {
+            text: '8月销售量导图'
+        },
+        xAxis: {
+            categories: ['8-1', '8-2', '8-3', '8-4', '8-5', '8-6',
+                '8-7', '8-8', '8-9', '8-10', '8-11', '8-12']
+        },
+        yAxis: {
+            title: {
+                text: '销售量'
+            },
+            labels: {
+                formatter: function() {
+                    return this.value +'个'
+                }
+            },
+            min: 0
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: '冰魄荔枝',
+            marker: {
+                symbol: 'square'
+            },
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+                y: 26.5,
+                marker: {
+                    symbol: 'url(img/sun.png)'
+                }
+            }, 23.3, 18.3, 13.9, 9.6]
+
+        }, {
+            name: '拿破仑',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: [{
+                y: 18.0,
+                marker: {
+                    symbol: 'url(img/sun.png)'
+                }
+            }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+
+        }, {
+            name: '猫爪蛋糕',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: [2.2, 6.7, 8.5, 11.9, 13.2, 10.0, 16.6,{
+                y: 18.0,
+                marker: {
+                    symbol: 'url(img/sun.png)'
+                }
+            }, 12.2, 8.3, 6.6, 4.0]
+        }]
+    });
+});
+</script>  
+</body>
+</html>

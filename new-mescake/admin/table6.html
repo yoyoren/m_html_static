@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>官网流量的来源统计和转化率</title>
+  <link rel="stylesheet" type="text/css" href="admin.css" />
+  <link rel="stylesheet" type="text/css" href="table.css" />
+</head>
+<body>
+  <div class="table-layout">
+  	<div class="al-head clearfix">
+  		<div class="fl-l"><img src="img/admin-mes-logo.png" width="120" />后台登录管理平台</div>
+  		<div class="fl-r"><a href="#" class="edit-password">修改密码</a></div>
+  	</div>
+    <div class="container">
+      <h4 class="table-title">官网流量的来源统计和转化率（需要一个跟手机上面差不多的日期选择器）</h4>
+      <!-- 以消费时间和消费数量图表化呈现出某一款蛋糕在某个时期的销售效果（可以看出不同时间点的需求情况） -->
+    	<div class="table-area">
+        <div class="quick-tab-area">
+            <p><b>快速导航：</b></p>
+            <div class="label"><a href="">来自百度搜索</a></div>
+            <div class="label"><a href="">来自微博</a></div>
+            <div class="label"><a href="">来自合作网站</a></div>
+            <div class="label"><a href="">来自网站推广</a></div>
+            <div class="label"><a href="">直接输入网站</a></div>
+        </div>
+        
+        <div style="margin:20px 0;" class="tl-r">
+          <input type="text" class="input-item" placeholder="请选择月份" />
+          <button class="btn">导出</button>   <button class="btn">推送优惠信息</button>
+        </div>
+        <div class="data-container" id="data_container"></div>
+
+        <div style="margin:20px 0;" class="tl-r">
+          <input type="text" class="input-item" placeholder="请选择月份" />
+          <button class="btn">导出</button>   <button class="btn">推送优惠信息</button>
+        </div>
+        <div class="data-container" id="data_container2"></div>
+
+        
+  	  </div>
+    </div>
+  	<div class="al-footer al-head">后台管理人员：任远  Tel:18688943324</div>
+
+  </div>
+<script src="js/jquery.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/modules/exporting.js"></script>
+<script>
+$(function () {
+
+    $('#data_container').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: '来自搜索'
+        },
+        subtitle: {
+            text: '8月数据来源与转化图'
+        },
+        xAxis: {
+            categories: ['8-1', '8-2', '8-3', '8-4', '8-5', '8-6',
+                '8-7', '8-8', '8-9', '8-10', '8-11', '8-12']
+        },
+        yAxis: {
+            title: {
+                text: '统计人数'
+            },
+            labels: {
+                formatter: function() {
+                    return this.value 
+                }
+            },
+            min: 0
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: '来源数据量',
+            marker: {
+                symbol: 'square'
+            },
+            data: [90, 80, 98, 102, 78, 80, 102, {
+                y: 103,
+                marker: {
+                    symbol: 'url(img/sun.png)'
+                }
+            }, 87, 92, 79, 96]
+
+        }, {
+            name: '转化人数',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: [{
+                y: 18,
+                marker: {
+                    symbol: 'url(img/sun.png)'
+                }
+            }, 4, 5, 8, 11, 15, 17, 16, 14, 10, 6, 5]
+        }]
+    });
+
+    $('#data_container2').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: '来自微博'
+        },
+        subtitle: {
+            text: '8月数据来源与转化图'
+        },
+        xAxis: {
+            categories: ['8-1', '8-2', '8-3', '8-4', '8-5', '8-6',
+                '8-7', '8-8', '8-9', '8-10', '8-11', '8-12']
+        },
+        yAxis: {
+            title: {
+                text: '统计人数'
+            },
+            labels: {
+                formatter: function() {
+                    return this.value 
+                }
+            },
+            min: 0
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: '来源数据量',
+            marker: {
+                symbol: 'square'
+            },
+            data: [90, 80, 98, 102, 78, 80, 102, {
+                y: 103,
+                marker: {
+                    symbol: 'url(img/sun.png)'
+                }
+            }, 87, 92, 79, 96]
+
+        }, {
+            name: '转化人数',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: [{
+                y: 18,
+                marker: {
+                    symbol: 'url(img/sun.png)'
+                }
+            }, 4, 5, 8, 11, 15, 17, 16, 14, 10, 6, 5]
+        }]
+    });
+});
+</script>  
+</body>
+</html>

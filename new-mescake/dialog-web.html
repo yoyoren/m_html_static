@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=2.0"/>
+  <title>弹窗组件详情</title>
+  <link rel="stylesheet" type="text/css" href="homev2.css" />
+  <link rel="stylesheet" type="text/css" href="home-wap.css" />
+  <link rel="stylesheet" type="text/css" href="dialog.css" />
+  <link rel="stylesheet" type="text/css" href="dialog-wap.css" />
+  <script src="https://account.xiaomi.com/static/res/42916/scripts/jquery-1.5.1.min.js"></script>
+</head>
+<body>
+<div class="return-area"><em class="ra-ico"></em><span class="ra-con">每实</span></div>
+<div class="dialog" style="z-index:1900; top:60px;">
+  <div class="dialog-head">
+    <p class="dia-title">用户登录</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form action="">
+      <div class="check-container">
+        <input type="text" class="global-input no-border-b" placeholder="手机号码"/>
+        <span class="tips-container">请填写收货人</span>
+      </div>
+      <div class="check-container">
+        <input type="text" class="global-input no-border-t" placeholder="用户密码"/>
+        <span class="tips-container">请填写收货人</span>
+      </div>
+      <input class="btn status1-btn big-btn long-btn" type="submit" value="登录"/>
+      <div class="pass-area">
+        <label for="remember"><input type="checkbox" id="remember" />&nbsp;记住登录</label>
+        <a href="">忘记密码</a>
+      </div>
+      <a href="" class="btn big-btn long-btn">新用户注册</a>
+    </form>
+  </div>
+</div>
+<div class="dialog" style="z-index:100; z-index:3900; top:400px;">
+  <div class="dialog-head">
+    <p class="dia-title">您选择了1.0磅的亚马逊（￥188）</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <div class="cake-tip-select">
+      <img class="cts-img-item" src="http://10.237.113.77/www/account/mescake/new-mescake/img/sort/caomei.jpg">
+      <p class="cts-intro">
+        <label for="check-item1">
+          <input type="checkbox" class="check-item" id="check-item1">
+          <b>请帮我切块（免费）</b><br>
+          在制作时帮您把蛋糕切块，方便分享（1磅蛋糕可切9块）
+        </label>
+      </p>
+      <p class="cts-intro"> 
+        <label for="check-item2"><input type="checkbox" class="check-item" id="check-item2">
+        <b>请使用无糖食材制作（加￥97元）</b><br>
+        一些蛋糕可以使用无糖的食材来制作，适合血糖敏感等人群食用</label>
+      </p>
+      <div class="single-btn-area">
+        <input class="btn status1-btn" type="button" value="继续">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog" style="z-index:2300; top:900px;">
+  <div class="dialog-head">
+    <p class="dia-title">选择蜡烛样式</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form action="">
+      <div class="check-candle-area">
+        <div class="cca-item cca-item-current clearfix">
+          <em class="radiobox-item radiobox-checked fl-l"></em>
+          <p class="cca-intro fl-l"><b>艺术蜡烛</b><br>￥5/只</p>
+          <div class="cca-img-area fl-l">
+            <img class="big-candle" src="img/lazhu1.jpg">
+          </div>
+          <div class="cca-func-area fl-l">
+            <p>请输入蜡烛数量</p>
+            <input type="text" class="global-input" style="width:70px;" placeholder="1">
+          </div>
+        </div>
+        <div class="cca-item clearfix">
+          <em class="radiobox-item fl-l"></em>
+          <p class="cca-intro fl-l"><b>数字蜡烛</b><br>￥5/个</p>
+          <div class="cca-img-area fl-l">
+            <img class="candle-item" src="img/lazhu-num-5.jpg">
+            <img class="candle-item" src="img/lazhu-num-2.jpg">
+            <img class="candle-item" src="img/lazhu-num-0.jpg">
+          </div>
+          <div class="cca-func-area fl-l">
+            <p>请输入你要的数字</p>
+            <input type="text" class="global-input" style="width:70px;" placeholder="520">
+          </div>
+        </div>
+        <div class="cca-item clearfix">
+          <em class="radiobox-item fl-l"></em>
+          <p class="cca-intro fl-l"><b>数字蜡烛</b><br>￥5/个</p>
+          <div class="cca-img-area fl-l for4">
+            <img class="candle-item" src="img/lazhu-num-5.jpg">
+            <img class="candle-item" src="img/lazhu-num-2.jpg"> 
+            <img class="candle-item" src="img/lazhu-num-0.jpg">
+            <img class="candle-item" src="img/lazhu-num-2.jpg"> 
+          </div>
+          <div class="cca-func-area fl-l">
+            <p>请输入你要的数字</p>
+            <input type="text" class="global-input" style="width:70px;" placeholder="520">
+          </div>
+        </div>
+        <div class="cca-item cca-item-current clearfix">
+          <em class="radiobox-item fl-l"></em>
+          <p class="cca-intro fl-l"><b>数字蜡烛</b><br>￥5/个</p>
+          <div class="cca-img-area fl-l more-than4">
+            <img class="candle-item" src="img/lazhu-num-5.jpg">
+            <img class="candle-item" src="img/lazhu-num-2.jpg"> 
+            <img class="candle-item" src="img/lazhu-num-0.jpg">
+            <img class="candle-item" src="img/lazhu-num-2.jpg"> 
+            <img class="candle-item" src="img/lazhu-num-2.jpg">
+            <img class="candle-item" src="img/lazhu-num-2.jpg">
+            <img class="candle-item" src="img/lazhu-num-2.jpg"> 
+            <img class="candle-item" src="img/lazhu-num-0.jpg">
+          </div>
+          <div class="cca-func-area fl-l">
+            <p>请输入你要的数字</p>
+            <input type="text" class="global-input" style="width:70px;" placeholder="520">
+          </div>
+        </div>
+      </div>
+      <div class="single-btn-area">
+        <input class="btn status1-btn" type="submit" value="确定">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="dialog" style="z-index:100; top:1540px;">
+  <div class="dialog-head">
+    <p class="dia-title">添加生日牌</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form>
+      <img src="img/birth-bg.jpg" class="birth-bg">
+      <div class="check-container">
+        <input type="text" class="global-input no-border-t" placeholder="请输入生日牌的内容（10字以内）">
+        <span class="tips-container">错误信息</span>
+      </div>
+      <div class="single-btn-area">
+        <input class="btn status1-btn" type="submit" value="确定">
+      </div>
+
+    </form>
+  </div>
+</div>
+<div class="dialog" style="top:20px; top:1900px;">
+  <div class="dialog-head">
+    <p class="dia-title">请输入您的手机号码</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form action="">
+    <p class="dia-form-tip tl-c">您今后将用此号码登录和查看订单，请正确填写</p>
+    <div class="check-container">
+      <input type="text" class="global-input" placeholder="手机号码">
+      <span class="tips-container">请填写收货人</span>
+    </div>
+    <div class="single-btn-area">
+      <input class="btn status1-btn" type="submit" value="确定">
+    </div>
+  </form>
+  </div>
+</div>
+<div class="dialog dia-sub-tip" style="top:320px; top:2200px;">
+  <div class="dialog-head">
+    <p class="dia-title">请输入您的手机号码</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form action="">
+    <p class="dia-st-tip">您确定要删除这个地址吗？</p>
+    <input class="btn status1-btn" type="submit" value="确定">
+    <input class="btn" type="reset" value="取消">
+  </form>
+  </div>
+</div>
+<div class="dialog" style="top:20px; top:2440px;">
+  <div class="dialog-head">
+    <p class="dia-title">新建收货地址</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form action="">
+      <a href="javascript:void(0);" class="area-intro space">
+          北京市
+          <em class="area-intro-ico"></em>
+          <span class="ai-intro">北京市五环内免费送货，五环外不送货。</span>
+      </a>
+      <select>
+        <option>请选择区域</option>
+        <option>朝阳区</option>
+        <option>海淀区</option>
+      </select><br>
+      <div class="check-container mart-10">
+        <textarea class="text-area" placeholder="详细地址"></textarea>
+        <span class="tips-container">地址格式错误</span>
+      </div>
+      <div class="check-container">
+        <input type="text" class="global-input" placeholder="收货人姓名">
+        <span class="tips-container">请填写收货人</span><!-- 错误信息容器,出现2秒后消失 -->
+      </div>
+      <div class="check-container">
+        <input type="text" class="global-input" placeholder="联系人的手机号码">
+        <span class="tips-container">手机号码格式错误</span>
+      </div>
+      <div class="single-btn-area">
+        <input class="btn status1-btn" type="submit" value="确定">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="dialog" style="top:2840px;">
+  <div class="dialog-head">
+    <p class="dia-title">修改登录密码</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form action="">
+      <div class="check-container">
+        <input type="text" class="global-input no-border-b" placeholder="请输入当前密码">
+        <span class="tips-container">密码错误</span><!-- 错误信息容器,出现2秒后消失 -->
+      </div>
+      <div class="check-container">
+        <input type="text" class="global-input no-border" placeholder="请输入6位或以上密码">
+        <span class="tips-container">不能为空密码</span>
+      </div>
+      <div class="check-container">
+        <input type="text" class="global-input no-border-t" placeholder="请再次确认密码">
+        <span class="tips-container">两次输入不一致</span>
+      </div>
+      <div class="single-btn-area">
+        <input class="btn status1-btn" type="submit" value="确定">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="dialog" style="top:3140px;">
+  <div class="dialog-head">
+    <p class="dia-title">代金券充值</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form action="">
+    <p class="dia-form-tip">请输入代金券密码</p><!-- 这里为了方便统一js交互做成了一个框 -->
+    <div class="check-container">
+      <input type="text" class="global-input" placeholder="请输入4位密码">
+      <span class="tips-container">输入错误</span>
+    </div>
+    <div class="single-btn-area">
+      <input class="btn status1-btn" type="submit" value="确定">
+    </div>
+  </form>
+  </div>
+</div>
+<div class="dialog" style="top:3440px;">
+  <div class="dialog-head">
+    <p class="dia-title">代金券充值</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form action="">
+      <div class="recharge-area">
+        <input type="text" class="global-input" style="width:50px;">
+        <input type="text" class="global-input" style="width:50px;">
+        <input type="text" class="global-input" style="width:50px;">
+        <input type="text" class="global-input" style="width:50px;">
+      </div>
+      <p class="error-tip">错误信息</p>
+      <div class="single-btn-area">
+        <input class="btn status1-btn" type="submit" value="确定">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="dialog" style="top:3700px;">
+  <div class="dialog-head">
+    <p class="dia-title">礼金卡充值</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form action="">
+      <div class="tl-c recharge-area">
+        <input type="text" class="global-input" style="width:52px;">
+        <input type="text" class="global-input" style="width:52px;">
+        <input type="text" class="global-input" style="width:52px;">
+        <input type="text" class="global-input" style="width:52px;">
+      </div>
+      <div class="check-container">
+        <input type="password" class="global-input" placeholder="请输入卡的密码">
+        <span class="tips-container">输入错误</span><!-- 错误信息容器,出现2秒后消失 -->
+      </div>
+      <div class="check-container">
+        <input type="text" class="global-input slide-code-btn" placeholder="请输入您的手机号码" style="width:198px;">
+        <span class="tips-container">输入错误</span><!-- 错误信息容器,出现2秒后消失 -->
+      </div><a href="" class="btn vert-btn code-btn">获取验证码</a>
+      <div class="check-container">
+        <input type="password" class="global-input" placeholder="请输入短信验证码">
+        <span class="tips-container">输入错误</span><!-- 错误信息容器,出现2秒后消失 -->
+      </div>
+      <div class="single-btn-area">
+        <input class="btn status1-btn" type="submit" value="确定">
+      </div>
+      
+    </form>
+  </div>
+</div>
+<div class="dialog" style="top:4100px;">
+  <div class="dialog-head">
+    <p class="dia-title">修改手机</p>
+    <a href="" class="close-ico">X</a>
+  </div>
+  <div class="dialog-con">
+    <form action="">
+      <div class="check-container">
+        <input type="text" class="global-input slide-code-btn" placeholder="请输入您的新的手机号码" style="width:198px;">
+        <span class="tips-container">输入错误</span><!-- 错误信息容器,出现2秒后消失 -->
+      </div><a href="" class="btn vert-btn code-btn">获取验证码</a>
+      <div class="check-container">
+        <input type="password" class="global-input" placeholder="请输入短信验证码">
+        <span class="tips-container">输入错误</span><!-- 错误信息容器,出现2秒后消失 -->
+      </div>
+      <div class="single-btn-area">
+        <input class="btn status1-btn" type="submit" value="确定">
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

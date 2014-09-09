@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=2.0"/>
+  <title>购物车中的商品</title>
+  <link rel="stylesheet" type="text/css" href="home-wap.css" />
+  <link rel="stylesheet" type="text/css" href="dialog.css" />
+  <link rel="stylesheet" type="text/css" href="dialog-wap.css" />
+  <script src="https://account.xiaomi.com/static/res/42916/scripts/jquery-1.5.1.min.js"></script>
+</head>
+<body>
+  <div id="app_main" class="app-main app-nav">
+    <div class="return-area"><em class="ra-ico"></em><span class="ra-con">订单确认</span></div>
+    <div class="scroll-area">
+      <h4 class="wap-order-title-item">订单信息</h4>
+      <p class="wap-total-price">￥388元</p>
+      <div class="wap-order-item">
+        <img src="img/order-detail5.png" class="woi-img"/>
+        <div class="woi-intro-area">
+          <p class="woi-title">冰魄荔枝<span class="woi-price">￥188元</span></p>
+          <p class="woi-tip">尺寸：1.0磅&nbsp;&nbsp;特殊要求：无糖，切块</p>
+          <div class="" style="padding-top:6px;">
+            <em class="minus-ico"></em>
+            <input type="text" class="global-input num-input" style="width:30px;" value="1">
+            <em class="add-ico"></em>
+          </div>
+        </div>
+      </div>
+  <style type="text/css">
+.little-dialog{width: 200px; min-height: 100px; padding: 10px; background: #fff; border-radius: 6px; position: absolute; top:50%; left: 50%; margin-left: -110px; box-shadow: 0 0 2px #333;}
+.ld-btn-area{text-align: center;}
+.little-dialog .global-input {
+border: 1px solid #e5e5e5;
+border-radius: 3px;
+background: #fff;
+padding: 4px 10px;}
+.ld-title{text-align: center; color: #ff7e00; font-size: 14px; font-weight: bold; margin-bottom: 10px;}
+.add-ico,
+.minus-ico{width: 20px; height: 20px; display: inline-block; vertical-align: middle;}
+.add-ico{background: url(img/iconfont-add.png) 0 0 no-repeat; background-size: 20px 20px;}
+.minus-ico{background: url(img/iconfont-jian.png) 0 0 no-repeat; background-size: 20px 20px;}
+
+.num-input{border: 1px solid #ccc; height: 16px; line-height: 16px; padding: 4px 0; margin-bottom: 0; text-align: center; color: #333;}
+  </style>
+
+      <div class="wap-order-item hide">
+          <p class="woi-title">1</p>
+          <p class="woi-tip">购买数量</p>
+          <em class="wap-more-ico"></em>
+      </div>
+      <div class="wap-order-item">
+        <img src="img/order-detail5.png" class="woi-img"/>
+        <div class="woi-intro-area">
+          <p class="woi-title">冰魄荔枝<span class="woi-price">￥188元</span></p>
+          <p class="woi-tip">尺寸：1.0磅&nbsp;&nbsp;特殊要求：无糖，切块</p>
+          <div class="" style="padding-top:6px;">
+            <em class="minus-ico"></em>
+            <input type="text" class="global-input num-input" style="width:30px;" value="1">
+            <em class="add-ico"></em>
+          </div>
+        </div>
+      </div>
+      <div class="wap-order-item hide">
+          <p class="woi-title">1</p>
+          <p class="woi-tip">购买数量</p>
+          <em class="wap-more-ico"></em>
+      </div>
+<!--       <div class="wap-order-item">
+        <img src="img/order-detail1.png" class="woi-img" />
+        <p class="woi-title">2</p>
+        <p class="woi-tip">配套餐具（￥0元）</p>
+        <em class="wap-more-ico"></em>
+      </div>
+      <div class="wap-order-item">
+        <img src="img/lazhu1.jpg" class="woi-img woi-img-num" />
+        <p class="woi-title">2</p>
+        <p class="woi-tip">生日蜡烛（￥20元）</p>
+        <em class="wap-more-ico"></em>
+      </div>
+      <div class="wap-order-item">
+        <img src="img/lazhu-num-5.jpg" class="woi-img woi-img-num" />
+        <p class="woi-title">5</p>
+        <p class="woi-tip">数字蜡烛（￥5元）</p>
+        <em class="wap-more-ico"></em>
+      </div> -->
+      <style type="text/css">
+.minus-ico-me,
+.add-ico-me{display: inline-block; width: 24px; height: 24px; line-height:24px; border: 1px solid #ccc; border-radius: 4px; text-align: center; font-size: 16px; vertical-align: middle;}
+.add-ico-me{color: #f00;}
+      </style>
+      <div class="wap-order-item">
+        <img src="img/order-detail1.png" class="woi-img" />
+        <p class="woi-title">配套餐具（0.5元/套）<span class="woi-price">￥0元</span></p>
+        <div class="" style="padding-top:6px;">
+          <em class="minus-ico"></em>
+          <input type="text" class="global-input num-input" style="width:30px;" value="5">
+          <em class="add-ico"></em>
+        </div>
+      </div>
+      <div class="wap-order-item">
+        <img src="img/lazhu1.jpg" class="woi-img woi-img-num" />
+        <p class="woi-title">生日蜡烛（10元/只）<span class="woi-price">￥50元</span></p>
+        <div class="" style="padding-top:6px;">
+          <em class="minus-ico"></em>
+          <input type="text" class="global-input num-input" style="width:30px;" value="5">
+          <em class="add-ico"></em>
+        </div>
+      </div>
+      <div class="wap-order-item">
+        <img src="img/lazhu-num-5.jpg" class="woi-img woi-img-num" />
+        <p class="woi-title">数字蜡烛（5元/只）<span class="woi-price">￥10元</span></p>
+        <div class="" style="padding-top:6px;">
+          <em class="minus-ico"></em>
+          <input type="text" class="global-input num-input" style="width:30px;" value="2">
+          <em class="add-ico"></em>
+        </div>
+      </div>
+      <div class="wap-order-item">
+        <img src="img/order-detail4.png" class="woi-img" />
+        <p class="woi-title">生日牌（免费）</p>
+        <p class="woi-tip">留言内容（再见，妈蛋君）</p>
+        <em class="wap-more-ico"></em>
+      </div>
+      <div class="wap-order-item">
+        <!-- <img src="img/add-ico.png" class="woi-img" /> -->
+        <p class="woi-title">添加生日牌（免费）</p>
+        <em class="wap-more-ico"></em>
+      </div>
+
+      <div class="wap-order-item">
+        <!-- <img src="img/add-ico.png" class="woi-img" /> -->
+        <p class="woi-title">添加特制生日蜡烛</p>
+        <em class="wap-more-ico"></em>
+      </div>
+      <div class="wap-order-item">
+        <!-- <img src="img/add-ico.png" class="woi-img" /> -->
+        <p class="woi-title">添加精美花环</p>
+        <em class="wap-more-ico"></em>
+      </div>
+      <div class="wap-order-item" style="padding:10px;">
+        <div class="check-container">
+          <input type="text" id="leaveMes" class="global-input" placeholder="留言说明（20字以内）" style="margin-bottom:0;"/>
+        </div>
+      </div>
+      <h4 class="wap-order-title-item">送货信息</h4>
+      <p class="wap-little-tip hide">*为保证送货准确性，请您填写正确无误的信息</p>
+      <p class="wap-little-tip hide">如果您之前注册购买过，请<a href="" class="td-u">登录</a>以读取地址信息，并积累积分</p>
+      <div class="ama-item ama-item-current">
+        <p class="ama-name-area"><b class="fl-l">梅梅哇</b><span class="fl-r">1892432434</span></p>
+        <p class="address-area">
+          <span class="city">北京市</span>
+          <span class="area">朝阳区</span><br/>
+          <span class="address">五道口朝阳大道5号楼345号五道口朝阳大道5号楼345号五5号楼345号</span>
+        </p>
+        <div class="clearfix handle-area">
+          <a href="" class="ama-delete fl-l">删除</a>
+          <a href="" class="ama-edit fl-r">修改</a>
+        </div>
+      </div>
+      <div class="ama-item hide">
+        <p class="ama-name-area"><b class="fl-l">梅梅哇</b><span class="fl-r">1892432434</span></p>
+        <p class="address-area">
+          <span class="city">北京市</span>
+          <span class="area">朝阳区</span><br/>
+          <span class="address">五道口朝阳大道5号楼345号五道口朝阳大道5号楼345号五5号楼345号</span>
+        </p>
+        <div class="clearfix handle-area">
+          <a href="" class="ama-delete fl-l">删除</a>
+          <a href="" class="ama-edit fl-r">修改</a>
+        </div>
+      </div>
+      <div class="clearfix pad-l-r10">
+        <em class="check-btn fl-l">添加新地址</em>
+        <em class="wap-more-address fl-r">更多地址<em class="wap-ad-down-ico"></em></em>
+      </div>
+      <h4 class="wap-order-title-item">送货时间</h4>
+      <div class="clearfix pad-l-r10" style="padding-bottom:20px;">
+        <select>
+          <option>请选择日期</option>
+          <option>23</option>
+          <option>34</option>
+        </select>
+        <select>
+          <option>小时</option>
+          <option>23</option>
+          <option>34</option>
+        </select>
+        <select>
+          <option>分钟</option>
+          <option>23</option>
+          <option>34</option>
+        </select>
+      </div>
+      <h4 class="wap-order-title-item">发票</h4>
+      <div class="wap-order-item" style="padding:10px;">
+        <label>开发票<input type="checkbox" class="wap-checkbox-item" style="top:18px;"/></label>
+        <ul class="tt-ul invoice-ul clearfix hide">
+          <li class="clearfix">
+            <div class="l-title">发票类型：</div>
+            <div class="r-con clearfix" style="padding-bottom:20px;">
+              普通发票
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="l-title">发票抬头：</div>
+            <div class="r-con clearfix" style="padding-bottom:20px;">
+              <label for="personal" class="space"><input type="radio" name="invoice" id="personal" class="radio-item" />个人</label>
+              <label for="company"><input type="radio" name="invoice" id="company" class="radio-item" />公司</label>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="l-title lh-input">顾客姓名：</div>
+            <div class="r-con clearfix">
+              <div class="check-container">
+                <input type="password" class="global-input" placeholder="请填写发票打印抬头"/>
+                <span class="tips-container">输入错误</span>
+              </div>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="l-title lh-input">公司名称：</div>
+            <div class="r-con clearfix">
+              <div class="check-container">
+                <input type="password" class="global-input" placeholder="请填写发票打印抬头"/>
+                <span class="tips-container">输入错误</span>
+              </div>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="l-title">发票内容：</div>
+            <div class="r-con clearfix" style="padding-bottom:20px;">
+              <label for="cake" class="space"><input type="radio" name="invoiceCon" id="cake" class="radio-item" />蛋糕</label>
+              <label for="food"><input type="radio" name="invoiceCon" id="food" class="radio-item" />食品</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <h4 class="wap-order-title-item">付款方式</h4>
+      <div class="wap-order-item" style="padding:10px;">
+        <label for="cashon">货到付款
+            <select><option>现金付款</option><option>POS机刷卡</option></select>
+            <input type="radio" name="payStyle" id="cashon" class="wap-radio-item" />
+        </label>
+      </div>
+      <div class="wap-order-item" style="padding:10px;">
+        <label for="alipay"><input type="radio" name="payStyle" id="alipay" class="wap-radio-item" />支付宝</label>
+      </div>
+      <div class="wap-order-item" style="padding:10px;">
+        <label for="kuaiqian"><input type="radio" name="payStyle" id="kuaiqian" class="wap-radio-item" />快钱</label>
+      </div>
+      <h4 class="wap-order-title-item">优惠券使用</h4>
+      <div class="wap-order-item" style="padding:10px;">
+        <label for="voucher">使用现金券<input type="checkbox" id="voucher" class="wap-checkbox-item" style="top:18px;"/></label>
+        <div class="hide">
+            请输入10位现金券券号:<input type="text" class="global-input vt-a has-bor-input" style="margin-bottom:0;"/><em class="error-ico">x</em><em class="suc-ico">√</em>
+        </div>
+      </div>
+      <div class="wap-order-item" style="padding:10px; padding-bottom:120px;">
+        <label for="balance">活动赠送/礼金卡<input type="checkbox" id="balance" class="wap-checkbox-item" style="top:18px;"/></label>
+        <div class="hide">
+          <span class="overage-area"><span>可用余额（50元）</span><a class="btn status1-btn">充值</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="wap-total-btn-area tl-c">
+      <p>共4件商品，总计500元（含邮费10块）<p/>
+      <a href="" class="btn big-btn status1-btn">确定</a>
+    </div>
+  </div>
+</body>
+</html>
